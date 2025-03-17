@@ -4,6 +4,8 @@
   --color-primary: #5c47f9;
   --color-warning: #dd6706;
   --color-warning-bg: #ffebdb;
+
+  --shadow-custom: -1px -4px 32px rgba(19, 17, 32, 0.05);
 }
 
 @keyframes bounceCustom {
@@ -14,7 +16,7 @@
     transform: translateY(-20px);
   }
   50% {
-    transform: translateY(40px);
+    transform: translateY(30px);
   }
   75% {
     transform: translateY(-10px);

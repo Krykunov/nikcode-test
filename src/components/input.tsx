@@ -41,11 +41,14 @@ const Input: React.FC<Props> = ({ title, name, value, setFormData }) => {
 
   return (
     <div className="flex flex-col gap-1">
-      <div className="flex justify-between items-center">
-        <label htmlFor={name} className="text-gray-600 ">
+      <div className="flex justify-start gap-2 items-center">
+        <label htmlFor={name} className="text-gray-600 text-md">
           {title}
         </label>
-        <Image width={16} height={16} src="/icons/copypaste.svg" alt="Copy" />
+        <span className="flex items-center justify-center rounded-sm text-[10px] p-2 bg-gray-200 h-4 w-4 text-gray-500">
+          5
+        </span>
+        <Image className="ml-auto" width={16} height={16} src="/icons/copypaste.svg" alt="Copy" />
       </div>
       <div className="relative w-full ">
         <input
@@ -59,7 +62,7 @@ const Input: React.FC<Props> = ({ title, name, value, setFormData }) => {
           className="h-8 border border-gray-300 rounded-md px-3 py-2 w-full text-sm bg-white"
         />
         {isLoading && (
-          <div className="absolute top-2 left-2 w-68 h-4 bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100 animate-pulse rounded-sm"></div>
+          <div className="absolute top-2 left-2 w-66 h-4 bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100 animate-pulse rounded-sm"></div>
         )}
       </div>
     </div>

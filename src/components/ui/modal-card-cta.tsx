@@ -30,8 +30,8 @@ const ModalCardCTA = () => {
   return (
     <div
       className={clsx(
-        "animate-bounceCustom transition-transform duration-500 in transform flex gap-4 flex-col absolute w-[328px] rounded-4xl p-6 text-white bg-gradient-to-r from-[#34245D] via-[#313266] to-[#36405E] -right-[110%]",
-        isShow ? "opacity-100 -translate-y-85" : "opacity-0 -translate-y-200"
+        "animate-bounceCustom transition-all duration-500 in transform flex gap-4 flex-col absolute w-[328px] rounded-4xl p-6 text-white bg-gradient-to-r from-[#34245D] via-[#313266] to-[#36405E] -right-[110%]",
+        isShow ? "opacity-100 -translate-y-125" : "opacity-0 -translate-y-180"
       )}
     >
       <Image width={24} height={24} src="icons/tip.svg" className="absolute -left-4 top-7" alt="" />

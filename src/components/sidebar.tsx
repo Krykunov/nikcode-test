@@ -4,7 +4,7 @@ import Image from "next/image";
 import ModalCardCTA from "./ui/modal-card-cta";
 import clsx from "clsx";
 import { useStateStore } from "@/store/store";
-import { ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 const Sidebar = () => {
   const { currentState } = useStateStore();
@@ -23,10 +23,19 @@ const Sidebar = () => {
         <h2>Data entry</h2>
         <Image width={20} height={20} src="icons/info.svg" alt="" />
 
-        <ChevronUp color="#5C5C5E" className=" ml-auto" />
+        <ChevronUp color="#afafaf" className=" ml-auto" />
       </div>
 
       <EmployerForm />
+      <div className="flex justify-between items-center bg-[#FCFDFF] h-[52px] rounded-2xl gap-1 p-4 mt-2 shadow-custom">
+        <h3 className="uppercase text-gray-600 text-sm">Document details</h3>
+        <ChevronDown color="#afafaf" className=" ml-auto" />
+      </div>
+
+      <div className="flex justify-between items-center bg-[#FCFDFF] h-[52px] rounded-2xl gap-1 p-4 mt-2 shadow-custom">
+        <h3 className="uppercase text-gray-600 text-sm">Employee</h3>
+        <ChevronDown color="#afafaf" className=" ml-auto" />
+      </div>
       <ModalCardCTA />
     </div>
   );
