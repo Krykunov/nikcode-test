@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #5c47f9;
+}
+
+@keyframes bounceCustom {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-20px); /* First bounce height */
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-10px); /* Reduced bounce height */
+  }
+}
+
+@layer utilities {
+  .animate-bounceCustom {
+    animation: bounceCustom 2s ease-in-out 2 forwards;
+  }
+}

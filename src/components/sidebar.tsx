@@ -1,7 +1,7 @@
 import React from "react";
 import EmployerForm from "./employerForm";
 import Image from "next/image";
-import ModalCard from "./ui/modal-card";
+import ModalCardCTA from "./ui/modal-card-cta";
 
 const Sidebar = () => {
   return (
@@ -13,9 +13,7 @@ const Sidebar = () => {
       </div>
 
       <EmployerForm />
-      <ModalCard>
-        <div>Modal content</div>
-      </ModalCard>
+      <ModalCardCTA />
     </div>
   );
 };
