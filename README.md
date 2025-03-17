@@ -1,5 +1,7 @@
 ## Getting Started
 
+[Deployment link](https://nikcode-test.vercel.app/)
+
 First, run the development server:
 
 ```bash
