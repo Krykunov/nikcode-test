@@ -2,6 +2,8 @@
 
 @theme {
   --color-primary: #5c47f9;
+  --color-warning: #dd6706;
+  --color-warning-bg: #ffebdb;
 }
 
 @keyframes bounceCustom {

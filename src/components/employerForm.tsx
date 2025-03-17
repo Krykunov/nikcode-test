@@ -4,6 +4,13 @@ import React, { useEffect, useState } from "react";
 import Input from "./input";
 import { useStateStore } from "@/store/store";
 
+export const autofillValues = {
+  firstName: "John",
+  lastName: "Doe",
+  companyAddress: "123 Main St, New York",
+  companyName: "Tech Corp",
+};
+
 const EmployerForm = () => {
   const { setIsLoading, currentState } = useStateStore();
 
@@ -14,20 +21,13 @@ const EmployerForm = () => {
     companyName: "",
   });
 
-  const autofillValues = {
-    firstName: "John",
-    lastName: "Doe",
-    companyAddress: "123 Main St, New York",
-    companyName: "Tech Corp",
-  };
-
   useEffect(() => {
     if (currentState !== "filled") return;
     setIsLoading(true);
     const timeoutId = setTimeout(() => {
       setFormData(autofillValues);
       setIsLoading(false);
-    }, 1000); // Artificial delay
+    }, 1000);
     return () => clearTimeout(timeoutId);
   }, [currentState]);
 

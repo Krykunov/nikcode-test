@@ -1,4 +1,5 @@
 import React from "react";
+import DocFields from "./doc-fields";
 
 const Document = () => {
   return (
@@ -13,6 +14,7 @@ const Document = () => {
         IN WITNESS WHEREOF, each of the Parties has executed this Software Development Agreement, both Parties by its
         duly authorized officer, as of the day and year set forth below.
       </p>
+      <DocFields />
     </div>
   );
 };

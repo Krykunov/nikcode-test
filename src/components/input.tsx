@@ -12,7 +12,7 @@ type Props = {
 };
 
 const Input: React.FC<Props> = ({ title, name, value, setFormData }) => {
-  const { isLoading } = useStateStore();
+  const { isLoading, currentState } = useStateStore();
   const [animatedValue, setAnimatedValue] = useState("");
 
   useEffect(() => {
@@ -54,7 +54,7 @@ const Input: React.FC<Props> = ({ title, name, value, setFormData }) => {
           name={name}
           value={animatedValue}
           onChange={handleChange}
-          placeholder={isLoading ? "" : "Enter value"}
+          placeholder={currentState !== "initial" ? "" : "Enter value"}
           disabled={isLoading}
           className="h-8 border border-gray-300 rounded-md px-3 py-2 w-full text-sm bg-white"
         />

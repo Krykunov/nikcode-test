@@ -7,7 +7,7 @@ import { useStateStore } from "@/store/store";
 import clsx from "clsx";
 
 const ModalCardCTA = () => {
-  const { currentState, setCurrentState } = useStateStore();
+  const { currentState, setCurrentState, setIsFinished } = useStateStore();
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -16,6 +16,17 @@ const ModalCardCTA = () => {
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  const fillHandler = () => {
+    setCurrentState("filled");
+
+    const timeout = setTimeout(() => {
+      setIsFinished(true);
+    }, 3000);
+
+    return () => clearTimeout(timeout);
+  };
+
   return (
     <div
       className={clsx(
@@ -34,7 +45,7 @@ const ModalCardCTA = () => {
         Do not spend too much time filling out the same information again and again.
       </p>
       <div className="flex justify-end">
-        <Button title="Autofill" clickHandler={() => setCurrentState("filled")} />
+        <Button title="Autofill" clickHandler={fillHandler} />
       </div>
     </div>
   );
