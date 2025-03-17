@@ -27,7 +27,7 @@ export default function Home() {
         <main
           className={clsx(
             "flex w-full h-full flex-row justify-end gap-[32px] row-start-2 items-center sm:items-start transition-all duration-500 ease-in-out",
-            isBlurred ? "blur-md" : "blur-0"
+            isBlurred ? "blur-md bg-indigo-100" : "blur-0"
           )}
         >
           <Document />

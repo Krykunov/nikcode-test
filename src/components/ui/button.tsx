@@ -9,7 +9,7 @@ const Button: React.FC<Props> = ({ title, clickHandler }) => {
   return (
     <div
       onClick={clickHandler}
-      className="flex bg-primary text-white px-6 py-[10px] rounded-lg cursor-pointer relative"
+      className="flex bg-primary text-white px-6 py-[10px] rounded-lg cursor-pointer relative animate-pulseBorder"
     >
       {title}
     </div>
